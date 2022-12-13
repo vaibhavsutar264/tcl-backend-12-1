@@ -1,8 +1,4 @@
-const fs = require('fs')
-const bodyParser = require('body-parser')
-const jsonServer = require('json-server')
-const jwt = require('jsonwebtoken')
-const getInvoices = {
+export const getInvoices = {
     "meta_data": {
         "api_name": "invoice_list"
     },
@@ -1539,7 +1535,7 @@ const getInvoices = {
 }
 
 
-const loginapi = {
+export const loginapi = {
     "meta_data": {
         "api_name": "token"
     },
@@ -1556,7 +1552,7 @@ const loginapi = {
     }
 }
 
-const loginfailedResponse = {
+export const loginfailedResponse = {
     "meta_data": {
         "api_name": "token"
     },
@@ -1567,7 +1563,7 @@ const loginfailedResponse = {
     }
 }
 
-const userinfo = {
+export const userinfo = {
     "meta_data": {
         "api_name": "userinfo"
     },
@@ -1578,7 +1574,7 @@ const userinfo = {
             "firstname": "Admin1",
             "lastName": "Idp",
             "attributes": {
-                "isLoginFirstTime": true,
+                "isLoginFirstTime": "true",
                 "phoneNumber": "917777777777",
                 "timezone": "IST",
                 "preferredCommunicationMode": "EMAIL"
@@ -1589,7 +1585,7 @@ const userinfo = {
     }
 }
 
-const resetPassword = {
+export const resetPassword = {
     "meta_data": {
         "api_name": "resetPassword"
     },
@@ -1600,7 +1596,7 @@ const resetPassword = {
     }
 }
 
-const logout = {
+export const logout = {
     "meta_data": {
         "api_name": "logout"
     },
@@ -1611,7 +1607,7 @@ const logout = {
     }
 }
 
-const forgotpassword = {
+export const forgotpassword = {
     "meta_data": {
         "api_name": "resetPassword"
     },
@@ -1622,7 +1618,7 @@ const forgotpassword = {
     }
 }
 
-const accountDetails = {
+export const accountDetails = {
     "meta_data": {
         "api_name": "getBillingDetails"
     },
@@ -1688,7 +1684,7 @@ const accountDetails = {
 }
 
 
-const updateaccount = {
+export const updateaccount = {
     "meta_data": {
         "api_name": "updateUserDetails"
     },
@@ -1734,83 +1730,3 @@ const requestbody = {
     }
 
 }
-
-const server = jsonServer.create()
-const router = jsonServer.router('./database.json')
-const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
-
-server.use(bodyParser.urlencoded({ extended: true }))
-server.use(bodyParser.json())
-server.use(jsonServer.defaults());
-
-
-
-// Check if the user exists in database
-function isAuthenticated({ email, password }) {
-    return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
-}
-
-
-
-// login
-server.post('/cpaas/token', (req, res) => {
-    const { email, password } = req.body;
-    if (isAuthenticated({ email, password }) === false) {
-        res.status(404).json(loginfailedResponse)
-    } else {
-        res.status(200).json(loginapi)
-    }
-});
-server.post('/cpaas/forgotPassword', (req, res) => {
-    res.status(200).json(forgotpassword)
-})
-server.post('/cpaas/logout', (req, res) => {
-    res.status(200).json(logout)
-})
-server.get('/cpaas/userinfo', (req, res) => {
-    res.status(200).json(userinfo)
-})
-server.post('/cpaas/resetPassword', (req, res) => {
-    res.status(200).json(resetPassword)
-})
-
-
-
-
-server.get('/orchestration/billing/invoices/getInvoices', (req, res) => {
-    res.status(200).json(getInvoices)
-})
-
-server.get('/orchestration/billing/invoices/getInvoices', (req, res) => {
-    res.status(200).json(getInvoices)
-})
-
-
-
-server.get('/orchestration/billing/invoices/downloadBillingInvoice', (req, res) => {
-    var file = fs.createReadStream('./files/sample.pdf');
-    var stat = fs.statSync('./files/sample.pdf');
-    res.setHeader('Content-Length', stat.size);
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename=sample.pdf');
-    file.pipe(res);
-})
-
-server.get('/orchestration/billing/invoices/downloadBillingInvoiceCDR', (req, res) => {
-    var file = fs.createReadStream('./files/sample.pdf');
-    var stat = fs.statSync('./files/sample.pdf');
-    res.setHeader('Content-Length', stat.size);
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename=sample.pdf');
-    file.pipe(res);
-})
-
-
-
-
-
-
-server.use(router)
-server.listen(4000, () => {
-    console.log('Run Auth API Server')
-})
