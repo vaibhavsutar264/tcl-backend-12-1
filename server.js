@@ -1574,11 +1574,11 @@ const userinfo = {
     "data": {
         "data": {
             "id": "a2fd942d-66c9-4628-bb12-8bd60dbb79fd",
-            "emailId": "rohitpatidar.007@gmail.com",
+            "emailId": "lalith@test.com",
             "firstname": "Admin1",
             "lastName": "Idp",
             "attributes": {
-                "isLoginFirstTime": true,
+                "isLoginFirstTime": false,
                 "phoneNumber": "917777777777",
                 "timezone": "IST",
                 "preferredCommunicationMode": "EMAIL"
@@ -1623,80 +1623,111 @@ const forgotpassword = {
 }
 
 const accountDetails = {
-    "meta_data": {
-        "api_name": "getBillingDetails"
+    'meta_data': {
+      'api_name': "getBillingDetails",
     },
-    "data": {
-        "data": {
-            "accountName": "Account1",
-            "legalentities": {
-                "le1": {
-                    "billingDetails": {
-                        "userId": 1231,
-                        "accountName": "LNT",
-                        "legalEntity": "LE!",
-                        "billingtype": "PostPay",
-                        "billingCycle": "Monthly",
-                        "paymentPeriod": "Net 30 days of the invoice date",
-                        "vatOrGSTNoOrTxId": "BTGPP#",
-                        "companyPAN": "BTGPP1314K",
-                        "applicableCurrency": "INR",
-                        "rateChangeNotificationPeriod": "30",
-                        "rateCoverageChangeTimeZone": "GMT",
-                        "contractTerm": "3 months",
-                        "accountStatus": "Suspended due to nonn Payment."
-                    },
-                    "sendInvoiceToContact": {
-                        "name": "JohnDeo",
-                        "address": "address1",
-                        "city": "city1",
-                        "country": "country1",
-                        "pin": "12345",
-                        "emailId": "emailId@company.com",
-                        "customerAuthorizedRateNotificationRecipient": "abc@company.com"
-                    }
-                },
-                "le2": {
-                    "billingDetails": {
-                        "userId": 1231,
-                        "accountName": "LNT",
-                        "legalEntity": "LE!",
-                        "billingtype": "PostPay",
-                        "billingCycle": "Monthly",
-                        "paymentPeriod": "Net 30 days of the invoice date",
-                        "vatOrGSTNoOrTxId": "BTGPP#",
-                        "companyPAN": "BTGPP1314K",
-                        "applicableCurrency": "INR",
-                        "rateChangeNotificationPeriod": "30",
-                        "rateCoverageChangeTimeZone": "GMT",
-                        "contractTerm": "3 months",
-                        "accountStatus": "Suspended due to nonn Payment."
-                    },
-                    "sendInvoiceToContact": {
-                        "name": "JohnDeo",
-                        "address": "address1",
-                        "city": "city1",
-                        "country": "country1",
-                        "pin": "12345",
-                        "emailId": "emailId@company.com",
-                        "customerAuthorizedRateNotificationRecipient": "abc@company.com"
-                    }
-                }
-            }
-        }
-    }
-}
+    'data': {
+      'data': {
+        'accountName': "Account1",
+        'legalentities': [
+          {
+            'le1': {
+              'billingDetails': {
+                'userId': 1231,
+                'accountName': "LNT1",
+                'legalEntity': "LE 1",
+                'billingtype': "PostPay",
+                'billingCycle': "Monthly",
+                'paymentPeriod': "Net 30 days of the invoice date",
+                'vatOrGSTNoOrTxId': "BTGPP#",
+                'companyPAN': "BTGPP1314K",
+                'applicableCurrency': "INR",
+                'rateChangeNotificationPeriod': "30",
+                'rateCoverageChangeTimeZone': "GMT",
+                'contractTerm': "3 months",
+                'accountStatus': "Suspended due to nonn Payment.",
+              },
+            },
+            'sendInvoiceToContact': {
+              'name': "JohnDeo",
+              'address': "address1",
+              'city': "city1",
+              'country': "country1",
+              'pin': "12345",
+              'emailId': "emailId@company.com",
+              'customerAuthorizedRateNotificationRecipient': "abc@company.com",
+            },
+          },
+          {
+            'le2': {
+              'billingDetails': {
+                'userId': 1231,
+                'accountName': "LNT2",
+                'legalEntity': "LE2",
+                'billingtype': "PostPay 2",
+                'billingCycle': "Monthly 2",
+                'paymentPeriod': "Net 30 days of the invoice date 2",
+                'vatOrGSTNoOrTxId': "BTGPP# 2",
+                'companyPAN': "BTGPP1314K 2",
+                'applicableCurrency': "INR",
+                'rateChangeNotificationPeriod': "30",
+                'rateCoverageChangeTimeZone': "GMT 2",
+                'contractTerm': "3 months 2",
+                'accountStatus': "Suspended due to nonn Payment. 2",
+              },
+            },
+              'sendInvoiceToContact': {
+                'name': "JohnDeo 2",
+                'address': "address1 2",
+                'city': "city1 2",
+                'country': "country1 2",
+                'pin': "12345 2",
+                'emailId': "emailId@company.com 2",
+                'customerAuthorizedRateNotificationRecipient':"abc@company.com 2",
+              },
+          },
+          {
+            'le3': {
+              'billingDetails': {
+                'userId': 1231,
+                'accountName': "LNT3",
+                'legalEntity': "LE 3",
+                'billingtype': "PostPay",
+                'billingCycle': "Monthly",
+                'paymentPeriod': "Net 30 days of the invoice date 3",
+                'vatOrGSTNoOrTxId': "BTGPP# 3",
+                'companyPAN': "BTGPP1314K 3",
+                'applicableCurrency': "INR",
+                'rateChangeNotificationPeriod': "30",
+                'rateCoverageChangeTimeZone': "GMT",
+                'contractTerm': "3 months 3",
+                'accountStatus': "Suspended due to nonn Payment.",
+              },
+            },
+            'sendInvoiceToContact': {
+              'name': "JohnDeo 3",
+              'address': "address1 3",
+              'city': "city1 3",
+              'country': "country1 3",
+              'pin': "12345 3",
+              'emailId': "emailId@company.com 3",
+              'customerAuthorizedRateNotificationRecipient': "abc@company.com 3",
+            },
+          }
+        ],
+      },
+    },
+  }
 
-
-const updateaccount = {
+  const updateaccount = {
     "meta_data": {
         "api_name": "updateUserDetails"
-    },
-    "data": {
-        "data": "SUCCESS",
-        "message": "Successfull",
-        "status": "200"
-    }
+      },
+      "data": {
+                "data": "SUCCESS",
+        "message" : "Successfull",
+        "status" : "200"
+      }
 }
 
 
@@ -1743,17 +1774,22 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
 server.use(jsonServer.defaults());
 
+const path = require('path')
+const express = require('express')
 
+const app = express();
 
+const cors = require('cors')
+app.use(cors())
 // Check if the user exists in database
 function isAuthenticated({ email, password }) {
     return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
 }
-
+app.use(express.json());
 
 
 // login
-server.post('/cpaas/token', (req, res) => {
+app.post('/cpaas/token', (req, res) => {
     const { email, password } = req.body;
     if (isAuthenticated({ email, password }) === false) {
         res.status(404).json(loginfailedResponse)
@@ -1761,33 +1797,37 @@ server.post('/cpaas/token', (req, res) => {
         res.status(200).json(loginapi)
     }
 });
-server.post('/cpaas/forgotPassword', (req, res) => {
+app.post('/cpaas/forgotPassword', (req, res) => {
     res.status(200).json(forgotpassword)
 })
-server.post('/cpaas/logout', (req, res) => {
+app.post('/cpaas/logout', (req, res) => {
     res.status(200).json(logout)
 })
-server.get('/cpaas/userinfo', (req, res) => {
+app.get('/cpaas/userinfo', (req, res) => {
     res.status(200).json(userinfo)
 })
-server.post('/cpaas/resetPassword', (req, res) => {
+app.post('/cpaas/resetPassword', (req, res) => {
     res.status(200).json(resetPassword)
 })
 
-
-
-
-server.get('/orchestration/billing/invoices/getInvoices', (req, res) => {
-    res.status(200).json(getInvoices)
-})
-
-server.get('/orchestration/billing/invoices/getInvoices', (req, res) => {
-    res.status(200).json(getInvoices)
+app.get('/orchestration/user/account_details/getAccountBillingDetails', (req, res) => {
+    res.status(200).json(accountDetails)
 })
 
 
+app.get('/orchestration/billing/invoices/getInvoices', (req, res) => {
+    res.status(200).json(getInvoices)
+})
 
-server.get('/orchestration/billing/invoices/downloadBillingInvoice', (req, res) => {
+app.get('/orchestration/billing/invoices/getInvoices', (req, res) => {
+    res.status(200).json(getInvoices)
+})
+
+app.post('/orchestration/user/account_details/updateUserDetails', (req, res) => {
+    res.status(200).json(updateaccount)
+})
+
+app.get('/orchestration/billing/invoices/downloadBillingInvoice', (req, res) => {
     var file = fs.createReadStream('./files/sample.pdf');
     var stat = fs.statSync('./files/sample.pdf');
     res.setHeader('Content-Length', stat.size);
@@ -1796,7 +1836,7 @@ server.get('/orchestration/billing/invoices/downloadBillingInvoice', (req, res) 
     file.pipe(res);
 })
 
-server.get('/orchestration/billing/invoices/downloadBillingInvoiceCDR', (req, res) => {
+app.get('/orchestration/billing/invoices/downloadBillingInvoiceCDR', (req, res) => {
     var file = fs.createReadStream('./files/sample.pdf');
     var stat = fs.statSync('./files/sample.pdf');
     res.setHeader('Content-Length', stat.size);
@@ -1805,12 +1845,18 @@ server.get('/orchestration/billing/invoices/downloadBillingInvoiceCDR', (req, re
     file.pipe(res);
 })
 
+app.use("/", express.static(path.join(__dirname, 'UI')));
 
+app.set('trust proxy', true);
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'UI/index.html'), function (err) {
+        if (err) {
+            res.status(500).send(err)
+        }
+    })
+})
 
-
-
-
-server.use(router)
-server.listen(4000, () => {
-    console.log('Run Auth API Server')
+app.use(router)
+app.listen(8585, () => {
+    console.log('Run TCL server')
 })
