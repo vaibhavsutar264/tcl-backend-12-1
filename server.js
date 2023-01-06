@@ -1577,7 +1577,7 @@ const userinfo = {
             "emailId": "lalith@test.com",
             "firstname": "Admin1",
             "lastName": "Idp",
-            "attributes": {
+            "attributes": { 
                 "isLoginFirstTime": false,
                 "phoneNumber": "917777777777",
                 "timezone": "IST",
