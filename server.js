@@ -1641,100 +1641,69 @@ const refreshToken = {
 
 const accountDetails = {
     'meta_data': {
-      'api_name': "getBillingDetails",
+        'api_name': "getBillingDetails",
     },
     'data': {
-      'data': {
-        'accountName': "Account1",
-        'legalentities': [
-          {
-            'le1': {
-              'billingDetails': {
-                'userId': 1231,
-                'accountName': "LNT1",
-                'legalEntity': "LE 1",
-                'billingtype': "PostPay",
-                'billingCycle': "Monthly",
-                'paymentPeriod': "Net 30 days of the invoice date",
-                'vatOrGSTNoOrTxId': "BTGPP#",
-                'companyPAN': "BTGPP1314K",
-                'applicableCurrency': "INR",
-                'rateChangeNotificationPeriod': "30",
-                'rateCoverageChangeTimeZone': "GMT",
-                'contractTerm': "3 months",
-                'accountStatus': "Suspended due to nonn Payment.",
-              },
-            },
-            'sendInvoiceToContact': {
-              'name': "JohnDeo",
-              'address': "address1",
-              'city': "city1",
-              'country': "country1",
-              'pin': "12345",
-              'emailId': "emailId@company.com",
-              'customerAuthorizedRateNotificationRecipient': "abc@company.com",
-            },
-          },
-          {
-            'le2': {
-              'billingDetails': {
-                'userId': 1231,
-                'accountName': "LNT2",
-                'legalEntity': "LE2",
-                'billingtype': "PostPay 2",
-                'billingCycle': "Monthly 2",
-                'paymentPeriod': "Net 30 days of the invoice date 2",
-                'vatOrGSTNoOrTxId': "BTGPP# 2",
-                'companyPAN': "BTGPP1314K 2",
-                'applicableCurrency': "INR",
-                'rateChangeNotificationPeriod': "30",
-                'rateCoverageChangeTimeZone': "GMT 2",
-                'contractTerm': "3 months 2",
-                'accountStatus': "Suspended due to nonn Payment. 2",
-              },
-            },
-              'sendInvoiceToContact': {
-                'name': "JohnDeo 2",
-                'address': "address1 2",
-                'city': "city1 2",
-                'country': "country1 2",
-                'pin': "12345 2",
-                'emailId': "emailId@company.com 2",
-                'customerAuthorizedRateNotificationRecipient':"abc@company.com 2",
-              },
-          },
-          {
-            'le3': {
-              'billingDetails': {
-                'userId': 1231,
-                'accountName': "LNT3",
-                'legalEntity': "LE 3",
-                'billingtype': "PostPay",
-                'billingCycle': "Monthly",
-                'paymentPeriod': "Net 30 days of the invoice date 3",
-                'vatOrGSTNoOrTxId': "BTGPP# 3",
-                'companyPAN': "BTGPP1314K 3",
-                'applicableCurrency': "INR",
-                'rateChangeNotificationPeriod': "30",
-                'rateCoverageChangeTimeZone': "GMT",
-                'contractTerm': "3 months 3",
-                'accountStatus': "Suspended due to nonn Payment.",
-              },
-            },
-            'sendInvoiceToContact': {
-              'name': "JohnDeo 3",
-              'address': "address1 3",
-              'city': "city1 3",
-              'country': "country1 3",
-              'pin': "12345 3",
-              'emailId': "emailId@company.com 3",
-              'customerAuthorizedRateNotificationRecipient': "abc@company.com 3",
-            },
-          }
-        ],
-      },
+        'data': {
+            'accountName': "Account1",
+            "legalentities": [
+                {
+                    "legalEntityName": "Legal Entity 1",
+                    "legalEntityId": "27504",
+                    "billingDetails": {
+                        "accountName": "Account1",
+                        "billingtype": "PostPay",
+                        "billingCycle": "Monthly",
+                        "paymentPeriod": "Net 30 days of the invoice date",
+                        "vatOrGSTNoOrTxId": "BTGPP#",
+                        "companyPAN": "BTGPP1314K",
+                        "applicableCurrency": "INR",
+                        "rateChangeNotificationPeriod": "30",
+                        "rateCoverageChangeTimeZone": "GMT",
+                        "contractTerm": "3 months",
+                        "accountStatus": "Suspended due to nonn Payment."
+                    },
+                    "sendInvoiceToContact": {
+                        "name": "JohnDeo Le1",
+                        "address": "address1",
+                        "city": "city1",
+                        "country": "country1",
+                        "pin": "12345",
+                        "emailId": "le1emailId@company.com",
+                        "customerAuthorizedRateNotificationRecipient": "le1@company.com"
+                    }
+                },
+                {
+                    "legalEntityName": "Legal Entity 2",
+                    "legalEntityId": "27506",
+                    "billingDetails": {
+                        "accountName": "Account1",
+                        "billingtype": "PostPay",
+                        "billingCycle": "Monthly",
+                        "paymentPeriod": "Net 30 days of the invoice date",
+                        "vatOrGSTNoOrTxId": "BTGPP#",
+                        "companyPAN": "BTGPP1314G",
+                        "applicableCurrency": "USD",
+                        "rateChangeNotificationPeriod": "30",
+                        "rateCoverageChangeTimeZone": "GMT",
+                        "contractTerm": "3 months",
+                        "accountStatus": "Active"
+                    },
+                    "sendInvoiceToContact": {
+                        "name": "JohnDeo Le2",
+                        "address": "address2",
+                        "city": "city2",
+                        "country": "country2",
+                        "pin": "1234567",
+                        "emailId": "le2emailId@company.com",
+                        "customerAuthorizedRateNotificationRecipient": "le2@company.com"
+                    }
+                }
+            ],
+        },
     },
-  }
+}
+
 
   const updateaccount = {
     "meta_data": {
