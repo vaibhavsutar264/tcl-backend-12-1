@@ -1600,6 +1600,17 @@ const resetPassword = {
     }
 }
 
+const changePassword = {
+    "meta_data": {
+        "api_name": "changePassword"
+    },
+    "data": {
+        "data": "SUCCESS",
+        "message": "Password changed successfully.",
+        "status": 200
+    }
+}
+
 const logout = {
     "meta_data": {
         "api_name": "logout"
@@ -1794,6 +1805,9 @@ app.get('/cpaas/userinfo', (req, res) => {
 })
 app.post('/cpaas/resetPassword', (req, res) => {
     res.status(200).json(resetPassword)
+})
+app.post('/cpaas/changePassword', (req, res) => {
+    res.status(200).json(changePassword)
 })
 app.post('/cpaas/refreshToken', (req, res) => {
     const { token } = req.body;
