@@ -1569,25 +1569,36 @@ const loginfailedResponse = {
 
 const userinfo = {
     "meta_data": {
-        "api_name": "userinfo"
+      "api_name": "userinfo"
     },
     "data": {
-        "data": {
-            "id": "a2fd942d-66c9-4628-bb12-8bd60dbb79fd",
-            "emailId": "lalith@test.com",
-            "firstname": "Admin1",
-            "lastName": "Idp",
-            "attributes": { 
-                "isLoginFirstTime": false,
-                "phoneNumber": "917777777777",
-                "timezone": "IST",
-                "preferredCommunicationMode": "EMAIL"
-            }
-        },
-        "message": "User Details Fetched Successsfully",
-        "status": 200
+      "data": {
+        "id": "a2fd942d-66c9-4628-bb12-8bd60dbb79fd",
+        "emailId": "rohitpatidar.007@gmail.com",
+        "firstname": "Admin1",
+        "lastName": "Idp",
+        "loginFirstTime": false,
+        "phoneNumber":"917777777777",
+        "timezone":"IST",
+        "preferredCommunicationMode":"email",
+        "accountName" : "L&T private technology",
+        "rbacprofile" : {
+            "name" : "UserProfile1",
+            "accessPolicy" : [
+                "L&T tech1:service01:module1:read/write",
+                "L&T tech1:service01:module2:read/write",
+                "L&T tech1:service02:module2:read/write",
+                "L&T tech2:service01:module1:read/write",
+                "L&T tech2:service01:module2:read/write",
+                "L&T tech2:service02:module1:read/write"
+            ]
+        }
+      },
+      "message": "User Details Fetched Successsfully",
+      "status": 200
     }
-}
+  }
+
 
 const resetPassword = {
     "meta_data": {
