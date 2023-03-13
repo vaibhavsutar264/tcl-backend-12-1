@@ -1775,7 +1775,7 @@ const requestbody = {
 }
 
 const server = jsonServer.create()
-const router = jsonServer.router('./database.json')
+// const router = jsonServer.router('./database.json')
 const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
 
 server.use(bodyParser.urlencoded({ extended: true }))
@@ -1871,7 +1871,7 @@ app.get('/*', function (req, res) {
     })
 })
 
-app.use(router)
+// app.use(router)
 app.listen(process.env.PORT, () => {
     console.log('Run TCL server')
 })
