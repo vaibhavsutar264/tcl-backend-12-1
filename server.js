@@ -2,6 +2,7 @@ const fs = require('fs')
 const bodyParser = require('body-parser')
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
+const userdb = require('./users.json')
 const getInvoices = {
     "meta_data": {
         "api_name": "invoice_list"
@@ -1776,7 +1777,7 @@ const requestbody = {
 
 const server = jsonServer.create()
 // const router = jsonServer.router('./database.json')
-const userdb = JSON.parse(fs.readFileSync('users.json', 'UTF-8'))
+// const userdb = JSON.parse(fs.readFileSync('users.json', 'UTF-8'))
 
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
