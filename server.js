@@ -1875,3 +1875,5 @@ app.use(router)
 app.listen(process.env.PORT, () => {
     console.log('Run TCL server')
 })
+
+module.exports = app
